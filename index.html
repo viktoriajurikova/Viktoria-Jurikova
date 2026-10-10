@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viktória Juríková – Nehľadaj dôvody, hľadaj spôsoby</title>
+<meta name="description" content="Viktória Juríková – komunita žien, osobný rast a online biznis, ktorému sa môžeš venovať aj popri škole či práci. Promo do 20. 10. Napíš mi na WhatsApp.">
+<meta name="theme-color" content="#2B2170">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Viktória Juríková – Nehľadaj dôvody, hľadaj spôsoby">
+<meta property="og:description" content="Rast kariérny, osobnostný aj finančný – aj popri škole či práci. Promo do 20. 10.">
+<meta property="og:image" content="images/hero.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%235B3FD0'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-style='italic' fill='white' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&family=Figtree:wght@400..800&display=swap" rel="stylesheet">
+<style>
+/* ===== FARBY A PÍSMO ===== */
+:root{
+  --ink:#1F1747;      /* text na svetlom */
+  --night:#2B2170;    /* tmavé sekcie */
+  --deep:#191238;     /* album, pätička */
+  --iris:#5B3FD0;     /* hlavná fialová */
+  --iris-d:#4A30B8;
+  --mist:#ECE8FB;     /* svetlá levanduľová */
+  --peri:#DFE4FB;     /* svetlá modrastá */
+  --orchid:#E7CFFA;   /* jemná orchidea – tlačidlá na tmavom */
+  --lilac:#C9BCFF;
+  --soft:#574F86;     /* sekundárny text na svetlom */
+  --on:#EEEAFF;       /* text na tmavom */
+  --on-soft:#C7BFEE;
+  --dim:#A99BE0;
+  --line:rgba(91,63,208,.22);
+  --line-on:rgba(238,234,255,.16);
+  --serif:'Bodoni Moda',Didot,'Bodoni 72',Georgia,serif;
+  --sans:'Figtree',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --head:100px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--head)}
+body{font-family:var(--sans);font-size:1.0625rem;line-height:1.65;color:var(--ink);background:var(--mist);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+[hidden]{display:none!important}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.01em;color:var(--ink)}
+h2{font-size:clamp(2.1rem,4.4vw,3.3rem);margin-bottom:1.1rem;max-width:18ch}
+h1,h2,h3,h4{text-wrap:balance}
+p,figcaption,dd{text-wrap:pretty}
+h3{font-size:1.45rem;line-height:1.2;margin-bottom:.45rem}
+p{max-width:62ch}
+strong{font-weight:600}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:104px 0}
+.lead{font-size:1.15rem;color:var(--soft)}
+.on{background:var(--night);color:var(--on-soft)}
+.on h1,.on h2,.on h3{color:var(--on)}
+.on .lead{color:var(--on-soft)}
+:focus-visible{outline:3px solid #4767E0;outline-offset:3px}
+.on :focus-visible{outline-color:var(--lilac)}
+
+/* ===== TLAČIDLÁ ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;border:2px solid var(--iris);background:var(--iris);color:#fff;font:700 .95rem/1.2 var(--sans);text-decoration:none;text-align:center;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.btn:hover{background:var(--iris-d);border-color:var(--iris-d)}
+.btn.soft{background:var(--orchid);border-color:var(--orchid);color:var(--ink)}
+.btn.soft:hover{background:#fff;border-color:#fff}
+.btn.line{background:transparent;color:var(--iris);border-color:rgba(91,63,208,.45)}
+.btn.line:hover{border-color:var(--iris);background:rgba(91,63,208,.06)}
+.on .btn.line{color:var(--on);border-color:rgba(238,234,255,.4)}
+.on .btn.line:hover{border-color:var(--on);background:rgba(238,234,255,.07)}
+
+/* ===== PROMO LIŠTA + MENU ===== */
+.bar{position:fixed;top:0;left:0;right:0;z-index:60;display:block;background:var(--iris);color:#fff;text-align:center;text-decoration:none;font-size:.84rem;font-weight:500;line-height:1.35;padding:8px 14px}
+.bar b{font-weight:700}
+.bar .sm{display:none}
+nav{position:fixed;left:0;right:0;top:35px;z-index:50;background:rgba(236,232,251,.93);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:66px}
+.logo{font-family:var(--serif);font-weight:600;font-size:1.32rem;color:var(--ink);text-decoration:none;white-space:nowrap}
+.links{display:flex;align-items:center;gap:26px;font-size:.93rem;font-weight:500}
+.links a{color:var(--soft);text-decoration:none}
+.links a:hover{color:var(--iris)}
+.links .btn{color:#fff;padding:10px 20px;font-size:.88rem}
+.links .ig{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);color:var(--ink)}
+.ig svg{width:18px;height:18px;fill:currentColor}
+
+/* ===== ÚVOD ===== */
+.hero{padding:calc(var(--head) + 72px) 0 96px;background:radial-gradient(55% 65% at 80% 45%,rgba(157,184,255,.16),transparent 70%),var(--night);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;grid-template-areas:"head photo" "text photo";column-gap:64px}
+.hero-head{grid-area:head;align-self:end}
+.hero-text{grid-area:text;align-self:start}
+.hero h1{font-size:clamp(3.1rem,5.6vw,4.5rem);line-height:1.04;letter-spacing:-.015em;margin-bottom:1.8rem}
+.hero h1 .l1{display:block;color:var(--on-soft)}
+.hero h1 .l2{display:block;color:#fff}
+.strike{position:relative;display:inline-block;color:var(--dim)}
+.strike svg{position:absolute;left:-6%;width:112%;height:auto;top:.3em;overflow:visible;pointer-events:none}
+.strike path{fill:none;stroke:url(#rib);stroke-width:8;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.1s cubic-bezier(.6,0,.3,1) .5s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero p{font-size:1.12rem;color:var(--on-soft);margin-bottom:1rem;max-width:34em}
+.hero p strong{color:#fff}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:2rem}
+.arch{grid-area:photo;align-self:center;position:relative;aspect-ratio:3/4;border-radius:999px 999px 28px 28px;overflow:hidden;border:8px solid rgba(238,234,255,.12);background:#3A2E86;box-shadow:0 40px 80px -40px rgba(8,4,30,.8)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.badge{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);background:var(--orchid);color:var(--ink);padding:9px 18px;border-radius:999px;font-size:.8rem;font-weight:700;white-space:nowrap}
+
+/* ===== MIESTA NA FOTKY (kým nie sú nahraté) ===== */
+.pic,.photo{position:relative}
+.nofoto{background:#D9D1F7}
+.nofoto img{display:none}
+.nofoto::after{content:"Sem príde fotka\A" attr(data-ph);white-space:pre;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font:600 .85rem/1.5 var(--sans);color:var(--soft);padding:12px}
+.arch.nofoto{background:#3A2E86}
+.arch.nofoto::after,.grid .nofoto::after,.today .nofoto::after{color:var(--on-soft)}
+.photo.nofoto{aspect-ratio:4/5}
+.jgrid .nofoto{aspect-ratio:3/4}
+.grid .nofoto{aspect-ratio:4/5;background:#2F2575}
+.today .nofoto{background:#3A2E86}
+
+/* ===== O MNE ===== */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.photo{border-radius:24px;overflow:hidden}
+.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%}
+.about .photo{position:sticky;top:calc(var(--head) + 24px)}
+.about p{color:var(--soft);margin-bottom:1rem}
+.about p strong{color:var(--ink)}
+.pull{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.45rem,2.5vw,1.95rem);line-height:1.3;color:var(--iris);margin-top:2rem;padding-left:22px;border-left:3px solid var(--iris)}
+.about .pull{color:var(--iris)}
+
+/* ===== MÔJ PRÍBEH ===== */
+.story .lead{max-width:56ch}
+.curve{margin:3.4rem 0 1.6rem}
+.curve svg{display:block;width:100%;height:auto;overflow:visible}
+.curve .m{display:none}
+.curve .rib{fill:none;stroke:url(#rib);stroke-width:4;stroke-linecap:round}
+.curve .zero{stroke:var(--on-soft);stroke-opacity:.35;stroke-width:1.5;stroke-dasharray:4 7}
+.curve .zl{font:600 14px var(--sans);fill:var(--on-soft);fill-opacity:.7;text-anchor:end}
+.curve circle{fill:var(--on)}
+.curve circle.e{fill:var(--night);stroke:var(--on);stroke-width:2}
+.curve .num{font:700 15px var(--sans);fill:var(--night);text-anchor:middle}
+.curve .num.e{fill:var(--on)}
+.tl{list-style:none;display:grid;grid-template-columns:repeat(4,1fr)}
+.tl li{padding-right:30px}
+.tl .n{display:none}
+.tl h3{font-size:1.55rem}
+.tl p{font-size:.98rem;color:var(--on-soft)}
+.story .pull{color:var(--lilac);border-color:var(--lilac);margin-top:3.6rem}
+
+/* ===== CESTA ===== */
+.jgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:2.8rem}
+.jgrid figure{background:#fff;border-radius:22px;overflow:hidden}
+.jgrid img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 25%}
+.jgrid figcaption{padding:18px 20px 22px;font-size:.95rem;color:var(--soft)}
+.jgrid figcaption b{display:block;font-family:var(--serif);font-size:1.3rem;font-weight:600;line-height:1.2;color:var(--ink);margin-bottom:6px}
+.jgrid .today{background:var(--night)}
+.jgrid .today figcaption{color:var(--on-soft)}
+.jgrid .today b{color:var(--on)}
+
+/* ===== PRÍLEŽITOSŤ ===== */
+.opp{background:var(--peri)}
+.opp .top{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:start}
+.opp .intro{position:sticky;top:calc(var(--head) + 24px)}
+.benefits{list-style:none}
+.benefits li{padding:24px 0;border-top:1px solid var(--line)}
+.benefits li:last-child{border-bottom:1px solid var(--line)}
+.benefits h3{font-size:1.65rem}
+.benefits p{color:var(--soft)}
+.club{margin-top:4rem;background:var(--night);color:var(--on-soft);border-radius:28px;padding:44px;display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.club h3{color:var(--on);font-size:clamp(1.6rem,2.8vw,2.25rem);line-height:1.18;margin-bottom:.9rem}
+.club dl{display:grid;gap:12px}
+.club dl div{display:flex;align-items:baseline;gap:16px;padding:14px 18px;border-radius:16px;background:rgba(238,234,255,.07)}
+.club dt{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.3rem;color:var(--lilac);min-width:96px}
+.club dd{font-size:.97rem}
+.partner{margin-top:1.4rem;background:#fff;border-radius:22px;padding:24px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.partner p{color:var(--soft);font-size:.97rem}
+.partner p strong{color:var(--ink)}
+.partner .pl{display:flex;gap:10px;flex-wrap:wrap}
+.partner .btn{padding:11px 20px;font-size:.88rem}
+.closing{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.3;color:var(--ink);text-align:center;max-width:30ch;margin:4rem auto 0}
+
+/* ===== AKO TO FUNGUJE ===== */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:2.8rem;counter-reset:s}
+.steps li{border-top:2px solid var(--iris);padding-top:18px}
+.steps li::before{counter-increment:s;content:counter(s);display:block;font-family:var(--serif);font-style:italic;font-weight:500;font-size:3rem;line-height:1;color:var(--iris);margin-bottom:.7rem}
+.steps h3{font-size:1.35rem}
+.steps p{font-size:.97rem;color:var(--soft)}
+
+/* ===== EŠTE VÁHAŠ ===== */
+.qa{display:grid;grid-template-columns:1fr 1fr;column-gap:48px;margin-top:2.6rem}
+.qa div{padding:24px 0;border-top:1px solid var(--line-on)}
+.qa h3{font-style:italic;font-weight:500;font-size:1.4rem;color:var(--lilac)}
+.qa p{font-size:.98rem}
+.deal{margin-top:2.8rem;background:var(--mist);border-radius:28px;padding:38px;display:grid;grid-template-columns:.7fr 1fr 1fr;gap:32px;align-items:start}
+.on .deal h3{color:var(--ink);font-size:2rem}
+.deal h4{font:700 .95rem/1.4 var(--sans);color:var(--iris);margin-bottom:.35rem}
+.deal p{color:var(--soft)}
+.dcta{margin-top:3.2rem;text-align:center}
+.dcta p{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.3;color:var(--on);max-width:30ch;margin:0 auto 1.5rem}
+.dcta .btn{margin:6px}
+
+/* ===== ALBUM ===== */
+.album{background:var(--deep)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:2.4rem}
+.grid figure{border-radius:18px;overflow:hidden;background:var(--night);cursor:zoom-in}
+.grid figure:has(.nofoto){cursor:default}
+.grid img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .5s}
+.grid figure:hover img{transform:scale(1.03)}
+.grid .pic{overflow:hidden}
+.grid figcaption{padding:14px 16px 16px;font-size:.92rem;line-height:1.55;color:var(--on-soft)}
+.lb{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(12,8,30,.94)}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:80vh;border-radius:14px}
+.lb p{position:absolute;left:0;right:0;bottom:18px;max-width:760px;margin:0 auto;padding:0 24px;text-align:center;color:var(--on)}
+.lb button{position:absolute;background:none;border:0;color:#fff;font-size:2.4rem;line-height:1;cursor:pointer;padding:12px 18px}
+.lb .x{top:10px;right:12px}
+.lb .pv{left:6px;top:50%;transform:translateY(-50%)}
+.lb .nx{right:6px;top:50%;transform:translateY(-50%)}
+
+/* ===== PROMO ===== */
+.promo-sec{background:var(--peri)}
+.promo{border-radius:32px;background:var(--night);color:var(--on-soft);text-align:center;padding:64px 28px}
+.promo h2{color:var(--on);max-width:24ch;margin:0 auto 1.2rem}
+.promo p{margin:0 auto 1.6rem}
+.promo p strong{color:var(--on)}
+.offer{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;margin:0 auto 2rem}
+.offer>div{background:var(--orchid);color:var(--ink);border-radius:20px;padding:18px 26px;min-width:170px}
+.offer strong{display:block;font-family:var(--serif);font-size:1.9rem;font-weight:600;line-height:1.1}
+.offer span{font-size:.88rem;font-weight:600}
+.offer .or{background:none;min-width:0;padding:0;color:var(--lilac);font-weight:600}
+.cd{display:flex;justify-content:center;gap:12px;margin:0 auto 2.2rem}
+.cd div{background:rgba(238,234,255,.08);border-radius:16px;padding:14px 10px;min-width:88px}
+.cd b{display:block;font-family:var(--serif);font-size:2.4rem;font-weight:600;line-height:1.05;color:#fff}
+.cd small{font-size:.8rem;font-weight:600;color:var(--lilac)}
+
+/* ===== FORMULÁR ===== */
+.inquiry .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.inquiry .txt p{color:var(--soft);margin-bottom:1rem}
+.note{font-size:.9rem}
+form{background:#fff;border-radius:24px;padding:34px;display:grid;gap:16px;box-shadow:0 30px 60px -40px rgba(43,33,112,.45)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:.85rem;font-weight:700;color:var(--ink);margin-bottom:6px}
+label .opt{font-weight:500;color:var(--soft)}
+input,select,textarea{width:100%;padding:13px 15px;border:1.5px solid #D2CBF2;border-radius:12px;background:#F8F6FE;font:400 1rem/1.4 var(--sans);color:var(--ink);transition:border-color .2s,background .2s}
+input:focus,select:focus,textarea:focus{border-color:var(--iris);background:#fff}
+textarea{min-height:110px;resize:vertical}
+.chk{display:flex;align-items:flex-start;gap:10px;margin:0;font-weight:400}
+.chk input{flex:none;width:18px;height:18px;margin-top:3px;accent-color:var(--iris)}
+.chk span{font-size:.88rem;color:var(--soft)}
+form .btn{justify-self:start}
+.sent{font-size:.92rem;font-weight:600;color:var(--iris)}
+
+/* ===== KONTAKT ===== */
+.contact{background:var(--peri)}
+.contact .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.chan{display:grid;gap:12px;margin:1.8rem 0 2rem}
+.chan a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px;border-radius:16px;background:#fff;font-weight:700;text-decoration:none;transition:background .2s,color .2s}
+.chan a:hover{background:var(--iris);color:#fff}
+.chan small{font-size:.92rem;font-weight:500;color:var(--iris)}
+.chan a:hover small{color:#fff}
+.contact .photo img{aspect-ratio:1/1}
+.contact .photo.nofoto{aspect-ratio:1/1}
+
+/* ===== PÄTIČKA ===== */
+footer{background:var(--deep);color:var(--on-soft);padding:48px 0 104px;font-size:.86rem}
+footer p{max-width:80ch;margin-bottom:.7rem}
+footer .en{color:var(--on);font-weight:600}
+footer a{color:var(--lilac)}
+
+.wa{position:fixed;right:18px;bottom:18px;z-index:70;width:58px;height:58px;border-radius:50%;background:var(--iris);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 3px rgba(255,255,255,.85),0 14px 30px -10px rgba(20,10,60,.6)}
+.wa svg{width:28px;height:28px;fill:#fff}
+
+/* ===== TABLET ===== */
+@media (max-width:900px){
+  section{padding:80px 0}
+  .links a:not(.btn):not(.ig){display:none}
+  .hero{padding-top:calc(var(--head) + 48px);padding-bottom:72px}
+  .hero .wrap{grid-template-columns:1fr;grid-template-areas:"head" "photo" "text"}
+  .hero-head,.hero-text{align-self:auto}
+  .hero h1{margin-bottom:1.6rem}
+  .arch{width:100%;max-width:300px;justify-self:center;margin-bottom:2rem}
+  .about .wrap,.opp .top,.inquiry .wrap,.contact .wrap{grid-template-columns:1fr;gap:40px}
+  .about .photo,.opp .intro{position:relative;top:auto}
+  .about .photo{max-width:440px}
+  .contact .photo{max-width:380px}
+  .jgrid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr;row-gap:36px}
+  .club{grid-template-columns:1fr;padding:32px}
+  .deal{grid-template-columns:1fr;gap:18px}
+}
+@media (max-width:760px){
+  .curve{margin:2.6rem 0 2rem}
+  .curve .d{display:none}
+  .curve .m{display:block}
+  .tl{grid-template-columns:1fr;gap:24px}
+  .tl li{display:grid;grid-template-columns:36px 1fr;column-gap:14px;padding-right:0}
+  .tl .n{display:flex;grid-row:span 2;width:34px;height:34px;border-radius:50%;background:var(--on);color:var(--night);font-weight:700;font-size:.95rem;align-items:center;justify-content:center}
+  .tl li:nth-child(3) .n{background:transparent;border:2px solid var(--on);color:var(--on)}
+  .tl h3{font-size:1.4rem}
+}
+/* ===== MOBIL ===== */
+@media (max-width:600px){
+  body{font-size:1rem}
+  section{padding:64px 0}
+  .wrap{padding:0 18px}
+  h2{font-size:2.15rem}
+  .lead{font-size:1.06rem}
+  .bar{font-size:.76rem;padding:7px 10px}
+  .bar .lg{display:none}
+  .bar .sm{display:inline}
+  nav .wrap{height:60px;gap:10px}
+  .logo{font-size:1.12rem}
+  .links{gap:10px}
+  .links .btn{padding:9px 15px;font-size:.84rem}
+  .links .ig{width:36px;height:36px}
+  .hero{padding-top:calc(var(--head) + 36px);padding-bottom:60px}
+  .hero h1{font-size:clamp(2.3rem,11.2vw,3.2rem);margin-bottom:1.4rem}
+  .hero p{font-size:1.02rem}
+  .arch{max-width:250px;border-width:6px}
+  .badge{font-size:.72rem;padding:7px 14px;bottom:14px}
+  .cta{flex-direction:column}
+  .cta .btn,.dcta .btn{width:100%;margin:6px 0}
+  .pull{font-size:1.35rem;padding-left:16px}
+  .jgrid{gap:12px;margin-top:2rem}
+  .jgrid figure{border-radius:16px}
+  .jgrid figcaption{padding:12px 12px 16px;font-size:.84rem;line-height:1.5}
+  .jgrid figcaption b{font-size:1.08rem}
+  .benefits h3{font-size:1.4rem}
+  .club{padding:26px 20px;border-radius:22px}
+  .club dl div{flex-direction:column;gap:2px;padding:12px 16px}
+  .partner{padding:20px}
+  .partner .pl{width:100%;flex-direction:column}
+  .closing{font-size:1.5rem}
+  .steps{grid-template-columns:1fr;gap:0;margin-top:2rem}
+  .steps li{display:grid;grid-template-columns:44px 1fr;column-gap:12px;padding:18px 0 14px;border-top:1px solid var(--line)}
+  .steps li::before{grid-row:span 2;font-size:2.3rem;margin:0}
+  .steps h3{font-size:1.22rem}
+  .qa{grid-template-columns:1fr}
+  .qa h3{font-size:1.25rem}
+  .deal{padding:26px 20px;border-radius:22px}
+  .on .deal h3{font-size:1.7rem}
+  .grid{grid-template-columns:1fr;gap:14px;margin-top:1.8rem}
+  .grid figure{border-radius:16px}
+  .promo{padding:44px 16px;border-radius:24px}
+  .offer{gap:8px;flex-wrap:nowrap}
+  .offer>div{flex:1;min-width:0;padding:14px 8px}
+  .offer .or{flex:none}
+  .offer strong{font-size:1.3rem}
+  .cd{gap:8px}
+  .cd div{flex:1;min-width:0;padding:10px 4px}
+  .cd b{font-size:1.8rem}
+  .cd small{font-size:.7rem}
+  form{padding:22px 18px;gap:14px}
+  .row{grid-template-columns:1fr}
+  .row.pair{grid-template-columns:1fr 1fr;gap:10px}
+  form .btn{justify-self:stretch}
+  .chan a{padding:16px 18px}
+  .wa{width:52px;height:52px;right:14px;bottom:14px}
+  .wa svg{width:25px;height:25px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .strike path{animation:none;stroke-dashoffset:0}
+  .grid img{transition:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="rib" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E7CFFA"/>
+      <stop offset=".5" stop-color="#B9A8FF"/>
+      <stop offset="1" stop-color="#9DB8FF"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<a class="bar" id="bar" href="#promo"><b>Promo do 20. 10.:</b> <span class="lg">začni teraz a získaj pol roka alebo rok zadarmo.</span><span class="sm">pol roka až rok zadarmo.</span> Zostáva <span id="barTime">10 d</span>.</a>
+
+<nav aria-label="Hlavné menu">
+  <div class="wrap">
+    <a href="#top" class="logo">Viktória Juríková</a>
+    <div class="links">
+      <a href="#o-mne">O mne</a>
+      <a href="#pribeh">Môj príbeh</a>
+      <a href="#prilezitost">Príležitosť</a>
+      <a href="#album">Album</a>
+      <a class="ig" data-ig href="https://www.instagram.com/_wi.q_/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 3.8c2.7 0 3 0 4 .1 2.7.1 4 1.4 4.1 4.1.1 1 .1 1.4.1 4s0 3-.1 4c-.1 2.7-1.4 4-4.1 4.1-1 .1-1.4.1-4 .1s-3 0-4-.1c-2.7-.1-4-1.4-4.1-4.1-.1-1-.1-1.4-.1-4s0-3 .1-4C3.9 5.3 5.3 3.9 8 3.9c1-.1 1.4-.1 4-.1zM12 2c-2.7 0-3.1 0-4.1.1C4.3 2.2 2.2 4.3 2.1 7.9 2 8.9 2 9.3 2 12s0 3.1.1 4.1c.2 3.6 2.2 5.7 5.8 5.8 1 .1 1.4.1 4.1.1s3.1 0 4.1-.1c3.6-.2 5.7-2.2 5.8-5.8.1-1 .1-1.4.1-4.1s0-3.1-.1-4.1c-.2-3.6-2.2-5.7-5.8-5.8C15.1 2 14.7 2 12 2z"/></svg></a>
+      <a href="#formular" class="btn">Napíš mi</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ ÚVOD ============ -->
+<header class="hero on" id="top">
+  <div class="wrap">
+    <div class="hero-head">
+      <h1><span class="l1">Nehľadaj <span class="strike">dôvody<svg viewBox="0 0 400 60" aria-hidden="true" focusable="false"><path pathLength="1" d="M8 40C80 22 140 48 212 32S336 14 392 26"/></svg></span>.</span><span class="l2">Hľadaj spôsoby.</span></h1>
+    </div>
+    <div class="arch" data-ph="hero.jpg">
+      <img src="images/hero.jpg" alt="Viktória Juríková" fetchpriority="high" onerror="this.parentNode.classList.add('nofoto')">
+      <span class="badge" data-promo>Promo do 20. 10. – až rok zadarmo</span>
+    </div>
+    <div class="hero-text">
+      <p>Volám sa <strong>Viktória</strong>, mám 20 rokov a viem, aké je to začať od nuly. Tancujem, tvorím a budujem komunitu žien, ktoré si idú za svojimi cieľmi.</p>
+      <p>Ukážem ti príležitosť, ktorej sa môžeš venovať aj popri škole či práci – a pri ktorej rastieš <strong>kariérne, osobnostne aj finančne</strong>.</p>
+      <div class="cta">
+        <a href="#formular" class="btn soft">Chcem viac informácií</a>
+        <a href="#pribeh" class="btn line">Môj príbeh</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ O MNE ============ -->
+<section id="o-mne" class="about">
+  <div class="wrap">
+    <div class="photo" data-ph="o-mne.jpg"><img src="images/o-mne.jpg" alt="Viktória pred výstaviskom Rimini Fiera" loading="lazy" onerror="this.parentNode.classList.add('nofoto')"></div>
+    <div>
+      <h2>Kto som</h2>
+      <p>Vždy som vyhľadávala aktivity, v ktorých sa môžem realizovať umelecky alebo športovo. Venujem sa <strong>tancu</strong> a som celkovo veľmi tvorivý a umelecky založený človek.</p>
+      <p>Som citlivá, emotívna a hĺbavá. Vždy som cítila, že mojou úlohou je pomáhať druhým, preto som išla študovať zdravotníctvo. Práve tam som pochopila, že pomáhať sa dá mnohými spôsobmi – a mne je najbližší <strong>rozhovor, pochopenie a hľadanie riešení</strong>.</p>
+      <p>Nech sa budem pohybovať v akejkoľvek sfére, vždy pôjde o to isté: komunikovať, pomáhať druhým a hľadať cesty, ako si zlepšiť kvalitu života. Tak, že si stanovíš jasné hranice a ciele – a ideš si za nimi.</p>
+      <p>Som expresívna, otvorená a pozitívna, rada nabíjam ľudí energiou a motivujem ich. A mám aj vlastnosti, ktoré sú zlé a skvelé zároveň: som tvrdohlavá, súťaživá a dravá.</p>
+      <p class="pull">Keď sa pre niečo nadchnem a vidím v tom zmysel, idem po tom po hlave.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÔJ PRÍBEH ============ -->
+<section id="pribeh" class="story on">
+  <div class="wrap">
+    <h2>Od zlatého podnosu po nulu</h2>
+    <p class="lead">Posledné mesiace boli pre mňa neskutočné ups and downs. Dostala som od života poriadnu facku – a práve tá ma naučila najviac.</p>
+    <div class="curve" aria-hidden="true">
+      <svg class="d" viewBox="0 0 1000 190" focusable="false">
+        <line class="zero" x1="0" y1="160" x2="1000" y2="160"/>
+        <text class="zl" x="1000" y="150">0 €</text>
+        <path class="rib" d="M16 60C58 69 183 95 266 112C349 129 433 160 516 160C599 160 685 56 766 30C847 4 961 10 1000 6"/>
+        <circle cx="16" cy="60" r="16"/><text class="num" x="16" y="65.5">1</text>
+        <circle cx="266" cy="112" r="16"/><text class="num" x="266" y="117.5">2</text>
+        <circle class="e" cx="516" cy="160" r="16"/><text class="num e" x="516" y="165.5">3</text>
+        <circle cx="766" cy="30" r="16"/><text class="num" x="766" y="35.5">4</text>
+      </svg>
+      <svg class="m" viewBox="0 0 360 200" focusable="false">
+        <line class="zero" x1="0" y1="170" x2="360" y2="170"/>
+        <text class="zl" x="360" y="160">0 €</text>
+        <path class="rib" d="M20 64C37 73 88 102 122 120C156 138 191 170 224 170C257 170 300 65 322 38C344 11 352 15 358 10"/>
+        <circle cx="20" cy="64" r="17"/><text class="num" x="20" y="69.5">1</text>
+        <circle cx="122" cy="120" r="17"/><text class="num" x="122" y="125.5">2</text>
+        <circle class="e" cx="224" cy="170" r="17"/><text class="num e" x="224" y="175.5">3</text>
+        <circle cx="322" cy="38" r="17"/><text class="num" x="322" y="43.5">4</text>
+      </svg>
+    </div>
+    <ol class="tl">
+      <li><span class="n">1</span><h3>Zlatý podnos</h3><p>Moji rodičia podnikajú už od môjho narodenia a finančne sa nám darilo veľmi dobre. Dostala som všetko ako na zlatom podnose.</p></li>
+      <li><span class="n">2</span><h3>Stopka</h3><p>Prišiel covid a pre náš rodinný biznis – postavený na zákazníkoch, ktorí si prídu produkt kúpiť osobne – to bola úplná stopka. Vtedy som pochopila, ako funguje úspešné podnikanie a čo všetko musím zmeniť ja.</p></li>
+      <li><span class="n">3</span><h3>Nula</h3><p>Osobná transformácia, rozchod a finančne úplná nula. Niečo, čo bolo pre mňa kedysi nepredstaviteľné.</p></li>
+      <li><span class="n">4</span><h3>Reštart</h3><p>Od úplnej nuly som sa naučila finančnú gramotnosť, rozdiel medzi aktívnym a pasívnym príjmom a to, ako si vybudovať pasívny príjem vlastným podnikaním a podmienkami, ktoré vytvorím pre ľudí, čo so mnou spolupracujú.</p></li>
+    </ol>
+    <p class="pull">Momentálne pracujem na tom, aby som sa zmenila ja. Až potom sa začnú meniť veci okolo mňa.</p>
+  </div>
+</section>
+
+<!-- ============ CESTA NIE JE VŽDY ĽAHKÁ ============ -->
+<section id="cesta" class="journey">
+  <div class="wrap">
+    <h2>Cesta nie je vždy ľahká</h2>
+    <p class="lead">Na Instagrame vidíš úsmevy a výsledky. Málokto ti ukáže slzy, únavu a chvíle, keď chceš všetko zabaliť. Tieto fotky sú z obdobia, keď som bola na dne a chcela som s celým biznisom skončiť – dnes sú pre mňa pripomienkou, prečo sa nevzdávam.</p>
+    <div class="jgrid">
+      <figure><div class="pic" data-ph="cesta-1.jpg"><img src="images/cesta-1.jpg" alt="Viktória v ťažkom období" loading="lazy" onerror="this.parentNode.classList.add('nofoto')"></div><figcaption><b>Na dne</b>Boli dni, keď som bola smutná a nevládala som. Aj to k ceste patrí – a je to v poriadku.</figcaption></figure>
+      <figure><div class="pic" data-ph="cesta-2.jpg"><img src="images/cesta-2.jpg" alt="Viktória pracuje na laptope" loading="lazy" onerror="this.parentNode.classList.add('nofoto')"></div><figcaption><b>Popri práci</b>Po práci som si sadla k laptopu a pokračovala ďalej, lebo som videla zmysel v tom, čo budujem.</figcaption></figure>
+      <figure><div class="pic" data-ph="cesta-3.jpg"><img src="images/cesta-3.jpg" alt="Viktória v období pochybností" loading="lazy" onerror="this.parentNode.classList.add('nofoto')"></div><figcaption><b>Chcela som skončiť</b>Neraz som chcela všetko zabaliť. Vtedy sa mi moja tvrdohlavosť konečne hodila.</figcaption></figure>
+      <figure class="today"><div class="pic" data-ph="dnes.jpg"><img src="images/dnes.jpg" alt="Viktória s kamarátkou na podujatí The Mastery" loading="lazy" onerror="this.parentNode.classList.add('nofoto')"></div><figcaption><b>Dnes</b>Viem, kam idem, a budujem komunitu žien, ktoré idú so mnou. Toto je len začiatok.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRÍLEŽITOSŤ ============ -->
+<section id="prilezitost" class="opp">
+  <div class="wrap">
+    <div class="top">
+      <div class="intro">
+        <h2>Rásť môžeš vo všetkom naraz</h2>
+        <p class="lead">Nejde len o peniaze. Ide o to, kým sa staneš na ceste k nim. Ukážem ti online biznis, ktorému sa môžeš venovať aj part-time – s tímom, ktorý ťa podrží.</p>
+      </div>
+      <ul class="benefits">
+        <li><h3>Kariérny rast</h3><p>Naučíš sa komunikovať, viesť ľudí a budovať vlastný tím. Zručnosti, ktoré sa ti zídu kdekoľvek.</p></li>
+        <li><h3>Popri škole či práci</h3><p>Z mobilu alebo laptopu, vlastným tempom a odkiaľkoľvek. Začať môžeš part-time.</p></li>
+        <li><h3>Osobnostný a mentálny rast</h3><p>Sebavedomie, disciplína, jasné hranice a ciele. Rastieš ako žena aj ako človek.</p></li>
+        <li><h3>Vlastný príjem</h3><p>Pochopíš, ako fungujú peniaze a aký je rozdiel medzi aktívnym a pasívnym príjmom. Zarábať môžeš už počas učenia.</p></li>
+      </ul>
+    </div>
+    <div class="club">
+      <div>
+        <h3>Budujem komunitu žien, ktoré nehľadajú dôvody, ale spôsoby</h3>
+        <p>Pozitívne naladených, športovo a umelecky založených, odhodlaných a sebavedomých – alebo takých, ktoré sa nimi chcú stať. Žien, ktoré si jasne idú za svojimi cieľmi a navzájom sa ťahajú hore.</p>
+      </div>
+      <dl>
+        <div><dt>Energia</dt><dd>ktorá ťa nabíja každý deň</dd></div>
+        <div><dt>Podpora</dt><dd>aj v dňoch, keď sa ti nechce</dd></div>
+        <div><dt>Ciele</dt><dd>jasné a s plánom, ako ich dosiahnuť</dd></div>
+      </dl>
+    </div>
+    <div class="partner">
+      <p>Spolupracujem so spoločnosťou <strong>BE Club</strong> – globálnou firmou so sídlom v Dubaji (od roku 2018), ktorá je oficiálnym členom <strong>DSA UAE</strong>, asociácie priameho predaja v Spojených arabských emirátoch.</p>
+      <div class="pl">
+        <a class="btn" href="https://beclub.com/" target="_blank" rel="noopener">BE Club</a>
+        <a class="btn line" href="https://dsauae.ae/members-directory/be" target="_blank" rel="noopener">Členstvo v DSA UAE</a>
+      </div>
+    </div>
+    <p class="closing">Nesľubujem ti ľahkú cestu.<br>Sľubujem ti, že na ňu nebudeš sama.</p>
+  </div>
+</section>
+
+<!-- ============ AKO TO FUNGUJE ============ -->
+<section id="ako" class="path">
+  <div class="wrap">
+    <h2>Krok za krokom</h2>
+    <p class="lead">Od prvej správy po tvoje prvé ciele – vieš, čo ťa čaká.</p>
+    <ol class="steps">
+      <li><h3>Napíšeš mi</h3><p>Vyplníš krátky formulár alebo mi napíšeš na WhatsApp. Nič ťa to nestojí a k ničomu ťa to nezaväzuje.</p></li>
+      <li><h3>Spoznáme sa</h3><p>Porozprávame sa, odkiaľ štartuješ a čo chceš dosiahnuť. Ak to nebude pre teba, poviem ti to úprimne.</p></li>
+      <li><h3>Plán na mieru</h3><p>Podľa tvojho času a cieľov si nastavíme jasný plán – aj keď to budeš robiť popri škole či práci.</p></li>
+      <li><h3>Rastieš s nami</h3><p>Vstúpiš do komunity, učíš sa a máš podporu aj spätnú väzbu. Keď dosiahneš jeden cieľ, ideme na ďalší.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ EŠTE VÁHAŠ? ============ -->
+<section id="vahas" class="doubts on">
+  <div class="wrap">
+    <h2>Páči sa ti to, ale ešte si mi nenapísala?</h2>
+    <p class="lead">Rozumiem. Aj ja som mala strach a pochybnosti. Toto sú otázky, ktoré počúvam najčastejšie – a moje úprimné odpovede.</p>
+    <div class="qa">
+      <div><h3>„Nemám žiadne skúsenosti.“</h3><p>Ani ja som nemala. Začínala som od úplnej nuly. Všetko sa naučíš krok za krokom, s tímom za chrbtom.</p></div>
+      <div><h3>„Nemám na to čas.“</h3><p>Venovať sa tomu môžeš part-time, popri škole aj práci. Všetko je online a prispôsobíš si to svojmu tempu.</p></div>
+      <div><h3>„Nie je to príliš pekné na to, aby to bola pravda?“</h3><p>Zdravá skepsa je v poriadku. Nič ti nesľubujem – ukážem ti, ako to funguje, čo to obnáša a aké sú reálne riziká. Rozhodnutie je potom len na tebe.</p></div>
+      <div><h3>„Čo ak to nie je pre mňa?“</h3><p>Tak ti to poviem na rovinu. Jedna správa ťa k ničomu nezaväzuje – je to len rozhovor, po ktorom budeš mať jasno.</p></div>
+    </div>
+    <div class="deal">
+      <h3>Naša dohoda</h3>
+      <div><h4>Čo ti dám ja</h4><p>Cestu, nástroje, podporu a energiu – aj v dňoch, keď sa ti nebude chcieť.</p></div>
+      <div><h4>Čo urobíš ty</h4><p>Rozhodneš sa a vydržíš. Budeš hľadať spôsoby, nie dôvody – lebo za teba to nikto neurobí.</p></div>
+    </div>
+    <div class="dcta">
+      <p>Najhoršie, čo sa môže stať? Že sa dozvieš niečo nové – aj o sebe.</p>
+      <a href="#formular" class="btn soft">Chcem viac informácií</a>
+      <a class="btn line" data-ig href="https://www.instagram.com/_wi.q_/" target="_blank" rel="noopener">Pozrieť môj Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALBUM ============ -->
+<section id="album" class="album on">
+  <div class="wrap">
+    <h2>Kto som a čo robím</h2>
+    <p class="lead">Dva svety, ktoré ma formujú – tanec a biznis.</p>
+    <div class="grid">
+      <figure tabindex="0"><div class="pic" data-ph="album-1.jpg"><img src="images/album-1.jpg" alt="Fotka tanečnej skupiny" loading="lazy" onerror="this.parentNode.classList.add('nofoto')"></div><figcaption>Tanec je moja srdcovka. Disciplínu z tréningov dnes využívam aj v biznise.</figcaption></figure>
+      <figure tabindex="0"><div class="pic" data-ph="album-2.jpg"><img src="images/album-2.jpg" alt="Viktória s priateľmi na podujatí The Mastery v Rimini" loading="lazy" onerror="this.parentNode.classList.add('nofoto')"></div><figcaption>Rimini, The Mastery. Medzi ľuďmi, ktorí ma posúvajú ďalej.</figcaption></figure>
+      <figure tabindex="0"><div class="pic" data-ph="album-3.jpg"><img src="images/album-3.jpg" alt="Viktória so skupinou na podujatí The Mastery" loading="lazy" onerror="this.parentNode.classList.add('nofoto')"></div><figcaption>Spolu na The Mastery – ľudia, ktorí idú rovnakým smerom.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Fotka" aria-hidden="true">
+  <button class="x" type="button" aria-label="Zavrieť">×</button>
+  <button class="pv" type="button" aria-label="Predchádzajúca fotka">‹</button>
+  <img id="lbImg" alt="">
+  <button class="nx" type="button" aria-label="Ďalšia fotka">›</button>
+  <p id="lbCap"></p>
+</div>
+
+<!-- ============ PROMO ============ -->
+<section id="promo" class="promo-sec">
+  <div class="wrap">
+    <div class="promo">
+      <div id="promoLive">
+        <h2>Začni teraz a získaj pol roka alebo celý rok zadarmo</h2>
+        <p>Ak sa ku mne pridáš do <strong>20. 10.</strong>, môžeš mať prístup <strong>6 alebo dokonca 12 mesiacov zadarmo</strong>. Čo presne je v ponuke práve pre teba, ti poviem osobne – stačí mi napísať.</p>
+        <div class="offer">
+          <div><strong>6 mesiacov</strong><span>zadarmo</span></div>
+          <div class="or">alebo</div>
+          <div><strong>12 mesiacov</strong><span>zadarmo</span></div>
+        </div>
+        <div class="cd" role="timer" aria-label="Do konca akcie zostáva">
+          <div><b id="cd-d">0</b><small id="cd-dl">dní</small></div>
+          <div><b id="cd-h">0</b><small id="cd-hl">hodín</small></div>
+          <div><b id="cd-m">0</b><small id="cd-ml">minút</small></div>
+          <div><b id="cd-s">0</b><small id="cd-sl">sekúnd</small></div>
+        </div>
+        <p>Ponuka platí len do 20. 10. Neodkladaj to – možno je toto presne ten spôsob, ktorý hľadáš.</p>
+        <a href="#formular" class="btn soft">Chcem viac informácií</a>
+      </div>
+      <div id="promoEnded" hidden>
+        <h2>Promo už skončilo</h2>
+        <p>Napíš mi a dám ti vedieť, keď bude ďalšia akcia.</p>
+        <a href="#formular" class="btn soft">Chcem viac informácií</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMULÁR ============ -->
+<section id="formular" class="inquiry">
+  <div class="wrap">
+    <div class="txt">
+      <h2>Chceš sa dozvedieť viac?</h2>
+      <p>Toto nie je pre niekoho, kto to chce „len skúsiť“. Je to pre teba, ak si sa rozhodla niečo zmeniť.</p>
+      <p>Vyplň krátky formulár – po odoslaní sa ti otvorí WhatsApp s pripravenou správou, ktorú už len pošleš. Je to nezáväzné: spoznáme sa a poviem ti, či by to dávalo zmysel aj tebe.</p>
+      <p class="note">Údaje použijem iba na to, aby som ti odpovedala. Žiadny spam.</p>
+    </div>
+    <form id="f">
+      <div class="row">
+        <div><label for="n">Meno a priezvisko</label><input id="n" name="meno" autocomplete="name" required></div>
+        <div><label for="t">Telefón</label><input id="t" name="telefon" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="row pair">
+        <div><label for="v">Vek <span class="opt">(nepovinné)</span></label><input id="v" name="vek" type="number" min="18" max="99" inputmode="numeric"></div>
+        <div><label for="c">Mesto <span class="opt">(nepovinné)</span></label><input id="c" name="mesto" autocomplete="address-level2"></div>
+      </div>
+      <div class="row">
+        <div><label for="a">Čomu sa teraz venuješ?</label>
+          <select id="a" name="venujem-sa"><option>Študujem</option><option>Pracujem</option><option>Študujem aj pracujem</option><option>Som na materskej</option><option>Podnikám</option><option>Niečo iné</option></select></div>
+        <div><label for="ig">Instagram <span class="opt">(nepovinné)</span></label><input id="ig" name="instagram" placeholder="@"></div>
+      </div>
+      <div class="row">
+        <div><label for="i">Čo ťa láka najviac?</label>
+          <select id="i" name="laka-ma"><option data-promo>Promo – až rok zadarmo</option><option>Práca popri škole či práci</option><option>Kariérny rast a vlastný tím</option><option>Osobnostný a mentálny rast</option><option>Vlastný príjem a finančná gramotnosť</option><option>Komunita žien</option><option>Ešte neviem, chcem info</option></select></div>
+        <div><label for="h">Koľko času tomu vieš venovať?</label>
+          <select id="h" name="cas"><option>Pár hodín týždenne</option><option>Hodinu–dve denne</option><option>Chcem ísť naplno</option><option>Ešte neviem</option></select></div>
+      </div>
+      <div><label for="w">Prečo ťa to zaujíma? <span class="opt">(nepovinné)</span></label><textarea id="w" name="preco" placeholder="Napíš pár viet o sebe a o tom, čo by si chcela zmeniť."></textarea></div>
+      <label class="chk"><input type="checkbox" required><span>Súhlasím so spracovaním osobných údajov na účel odpovede na moju správu.</span></label>
+      <button class="btn" type="submit">Odoslať cez WhatsApp</button>
+      <p class="sent" id="sent" role="status" hidden>Otvára sa WhatsApp – správu už len odošli.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section id="kontakt" class="contact">
+  <div class="wrap">
+    <div>
+      <h2>Alebo mi napíš priamo</h2>
+      <p class="lead">Najrýchlejšie ma zastihneš na WhatsAppe – píš mi, prosím, iba tam.</p>
+      <div class="chan">
+        <a data-wa href="https://wa.me/421940659358" target="_blank" rel="noopener"><span>WhatsApp</span><small data-wa-num>+421 940 659 358</small></a>
+        <a data-ig href="https://www.instagram.com/_wi.q_/" target="_blank" rel="noopener"><span>Instagram</span><small data-ig-handle>@_wi.q_</small></a>
+        <a href="https://beclub.com/" target="_blank" rel="noopener"><span>Spolupracujem s</span><small>BE Club</small></a>
+      </div>
+      <a href="#formular" class="btn">Vyplniť formulár</a>
+    </div>
+    <div class="photo" data-ph="kontakt.jpg"><img src="images/kontakt.jpg" alt="Viktória s úsmevom" loading="lazy" onerror="this.parentNode.classList.add('nofoto')"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Výsledky uvedené na tejto stránke sú subjektívne a odrážajú osobnú skúsenosť. Minulé výsledky nie sú zárukou budúcich. Táto aktivita vyžaduje úsilie a čas a negarantuje zárobok, ak na nej nebudeš pracovať. Obchodovanie a investovanie so sebou nesie riziko straty.</p>
+    <p>Obsah má informatívny charakter a nepredstavuje finančné poradenstvo.</p>
+    <p class="en">This information is only for reference purposes and is not a guarantee of earning.</p>
+    <p>© <span id="y">2026</span> Viktória Juríková<span data-ig-wrap>. Instagram: <a data-ig href="https://www.instagram.com/_wi.q_/" target="_blank" rel="noopener" data-ig-handle>@_wi.q_</a></span></p>
+  </div>
+</footer>
+
+<a class="wa" data-wa href="https://wa.me/421940659358" target="_blank" rel="noopener" aria-label="Napísať na WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg>
+</a>
+
+<script>
+/* ===== NASTAVENIA – tu môžeš meniť ===== */
+const WHATSAPP  = "421940659358";                        // číslo bez + a medzier
+const INSTAGRAM = "https://www.instagram.com/_wi.q_/";   // odkaz na Instagram ("" = skryť všade)
+const PROMO_END = new Date("2026-10-20T23:59:59+02:00");  // koniec promo akcie
+/* ======================================= */
+
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+
+/* WhatsApp a Instagram – všetky odkazy podľa nastavení */
+const waUrl = "https://wa.me/" + WHATSAPP;
+$$("[data-wa]").forEach(a => a.href = waUrl);
+$$("[data-wa-num]").forEach(el => el.textContent = "+" + WHATSAPP.replace(/^(\d{3})(\d{3})(\d{3})(\d+)$/, "$1 $2 $3 $4"));
+if (INSTAGRAM) {
+  const handle = "@" + INSTAGRAM.replace(/[?#].*$/, "").replace(/\/+$/, "").split("/").pop();
+  $$("[data-ig]").forEach(a => a.href = INSTAGRAM);
+  $$("[data-ig-handle]").forEach(el => el.textContent = handle);
+} else {
+  $$("[data-ig], [data-ig-wrap]").forEach(el => el.hidden = true);
+}
+$("#y").textContent = new Date().getFullYear();
+
+/* Menu vždy pod promo lištou */
+function fitHead() {
+  const bar = $("#bar"), nav = $("nav");
+  const bh = bar.hidden ? 0 : bar.offsetHeight;
+  nav.style.top = bh + "px";
+  document.documentElement.style.setProperty("--head", (bh + nav.offsetHeight) + "px");
+}
+addEventListener("resize", fitHead);
+fitHead();
+
+/* Odpočet promo */
+const plural = (n, one, few, many) => n === 1 ? one : (n >= 2 && n <= 4 ? few : many);
+const pad = n => String(n).padStart(2, "0");
+let timer;
+function endPromo() {
+  clearInterval(timer);
+  $("#bar").hidden = true;
+  $("#promoLive").hidden = true;
+  $("#promoEnded").hidden = false;
+  $$("[data-promo]").forEach(el => el.tagName === "OPTION" ? el.remove() : el.hidden = true);
+  fitHead();
+}
+function tick() {
+  const diff = PROMO_END - Date.now();
+  if (diff <= 0) return endPromo();
+  const d = Math.floor(diff / 864e5), h = Math.floor(diff / 36e5) % 24,
+        m = Math.floor(diff / 6e4) % 60, s = Math.floor(diff / 1e3) % 60;
+  $("#cd-d").textContent = d;      $("#cd-dl").textContent = plural(d, "deň", "dni", "dní");
+  $("#cd-h").textContent = h;      $("#cd-hl").textContent = plural(h, "hodina", "hodiny", "hodín");
+  $("#cd-m").textContent = pad(m); $("#cd-ml").textContent = plural(m, "minúta", "minúty", "minút");
+  $("#cd-s").textContent = pad(s); $("#cd-sl").textContent = plural(s, "sekunda", "sekundy", "sekúnd");
+  $("#barTime").textContent = d + " d " + h + " h";
+}
+tick();
+timer = setInterval(tick, 1000);
+
+/* Album: zväčšenie fotky */
+const figs = $$(".grid figure");
+const lb = $("#lb"), lbImg = $("#lbImg"), lbCap = $("#lbCap");
+let cur = 0, lastFocus = null;
+const vis = () => figs.filter(f => !f.hidden && !f.querySelector(".nofoto"));
+function show(i) {
+  const v = vis(); if (!v.length) return;
+  cur = (i + v.length) % v.length;
+  const im = $("img", v[cur]), cap = $("figcaption", v[cur]);
+  lbImg.src = im.currentSrc || im.src; lbImg.alt = im.alt;
+  lbCap.textContent = cap ? cap.textContent : "";
+}
+function openLb(f) {
+  const i = vis().indexOf(f); if (i < 0) return;
+  lastFocus = document.activeElement; show(i);
+  lb.classList.add("open"); lb.setAttribute("aria-hidden", "false"); $(".x", lb).focus();
+}
+function closeLb() {
+  lb.classList.remove("open"); lb.setAttribute("aria-hidden", "true");
+  if (lastFocus) lastFocus.focus();
+}
+figs.forEach(f => {
+  f.addEventListener("click", () => openLb(f));
+  f.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLb(f); } });
+});
+$(".x", lb).onclick = closeLb;
+$(".pv", lb).onclick = () => show(cur - 1);
+$(".nx", lb).onclick = () => show(cur + 1);
+lb.addEventListener("click", e => { if (e.target === lb) closeLb(); });
+document.addEventListener("keydown", e => {
+  if (!lb.classList.contains("open")) return;
+  if (e.key === "Escape") closeLb();
+  if (e.key === "ArrowLeft") show(cur - 1);
+  if (e.key === "ArrowRight") show(cur + 1);
+});
+
+/* Formulár -> WhatsApp */
+$("#f").addEventListener("submit", e => {
+  e.preventDefault();
+  const v = id => $("#" + id).value.trim();
+  const rows = [
+    ["Meno", v("n")], ["Telefón", v("t")], ["Vek", v("v")], ["Mesto", v("c")],
+    ["Venujem sa", v("a")], ["Instagram", v("ig")], ["Láka ma", v("i")],
+    ["Čas", v("h")], ["Prečo", v("w")]
+  ].filter(r => r[1]).map(r => r[0] + ": " + r[1]);
+  const msg = "Ahoj Viktória, mám záujem o viac informácií ✨\n\n" + rows.join("\n");
+  const url = waUrl + "?text=" + encodeURIComponent(msg);
+  const w = window.open(url, "_blank");
+  if (!w) location.href = url;
+  $("#sent").hidden = false;
+});
+</script>
+</body>
+</html>
